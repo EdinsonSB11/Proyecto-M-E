@@ -71,14 +71,14 @@ https://templatemo.com/tm-542-new-vision
                               </li class="nav-item">
   
                               <li class="nav-item">
-                                  <a class="nav-link tm-nav-link" href="perfil">@{{user.username}}</a>
+                                  <a class="nav-link tm-nav-link" href="{%url 'perfil'%}">@{{user.username}}</a>
                               </li class="nav-item">
                               {%else%}
                               <li class="nav-item">
                                   <a class="nav-link tm-nav-link" href="register">Registro</a>
                                 </li>
                               <li class="nav-item">
-                                  <a class="nav-link tm-nav-link" href="accounts/login">Login</a>
+                                  <a class="nav-link tm-nav-link" href="{%url 'login'%}">Login</a>
                               </li>
                                 
                               {% endif%}
