@@ -11,7 +11,7 @@ class Account(models.Model):
     precio         = models.IntegerField(default=0)
     descripcion    = models.CharField('Descripcion inmueble', max_length=50,default='')
     ubicacion      = models.CharField('Ubicacion inmueble', max_length=50,default='')
-    lastChangeDate = models.DateTimeField(default=timezone.now)
+    lastChangeDate = models.DateField(default=timezone.now)
     isAvailable    = models.BooleanField(default=True)
 
     def _str_(self):

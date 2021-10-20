@@ -3,7 +3,7 @@ from django.contrib                 import admin
 from django.urls                    import path, include
 from authAppExample                 import views  as authAppViews
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
-from authAppExample.views.views           import inicio, crearInmueble, editarInmueble,eliminarInmueble, perfil,register
+from authAppExample.views.views           import inicio, crearInmueble, editarInmueble,eliminarInmueble, perfil,register,hoteles,hostales,resorts
 
 
 urlpatterns = [
@@ -26,4 +26,7 @@ urlpatterns = [
     path('accounts/',include('django.contrib.auth.urls')),
     path('perfil/', perfil, name = 'perfil'),
     path('register/', register, name='register'),
+    path('hoteles/', hoteles, name = 'hoteles'),
+    path('hostales/', hostales, name = 'hostales'),
+    path('resorts/', resorts, name = 'resorts'),
 ]

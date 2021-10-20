@@ -1,3 +1,4 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render,redirect
 from authAppExample.models import Account
 from authAppExample.forms import InmuebleForm, UserRegisterForm
@@ -55,6 +56,17 @@ def perfil(request):
         'inmuebles':inmuebles
     }
     return render(request,'perfil.html',contexto)
+
+def hoteles(request):
+    return render(request,'hotel.html')
+
+    
+def hostales(request):
+    return render(request,'hostal.html')
+
+    
+def resorts(request):
+    return render(request,'resort.html')
 
 
 def register(request):

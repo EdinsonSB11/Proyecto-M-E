@@ -25,6 +25,7 @@
                             {%csrf_token%}
                             {{form|crispy}}
                             <a href="{%url 'index' %}">Ir al home</a>
+                            <br>
                             <a href="{%url 'login' %}">¿Ya tienes una cuenta?</a>
                             <input type="submit" value="Registrar"  class="btn btn-success float-end">
                         </form>
