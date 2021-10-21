@@ -81,6 +81,13 @@
             <br>
             <br>
             <br>
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success fade show" role="alert">
+                <strong>{{ message }}</strong>
+            </div>
+            {% endfor %}
+            {% endif %}
         <div class="row">
             <div class="col-4 col-md-12 offset-md-0">
                 <div class="card">
@@ -95,8 +102,8 @@
                                 <div class="row">
                                     <div>
                                         
-                                        <table class="table table-striped">    
-                                            <thead class="thead-dark">
+                                        <table class="table">    
+                                            <thead class="thead-light">
                                             {%block noloquiero%}
                                                 <tr>
                                                     <th>Habitaciones</th>
@@ -124,10 +131,8 @@
                                                             <td align="center">{{inmueble.descripcion}}</td>
                                                             <td align="center">{{inmueble.ubicacion}}</td>
                                                             <td align="center">{{inmueble.lastChangeDate}}</td>
-                                                            <td><a class="btn btn-info" href="{% url 'editar_inmueble' inmueble.id %}">EDITAR</a></td>
-                                                        <td>
-                                                            <a class="btn btn-danger" href="{% url 'eliminar_inmueble' inmueble.id %}"> ELIMINAR </a>
-                                                        </td>
+                                                            <td><a style="color: white;" class="btn btn-info" href="{% url 'editar_inmueble' inmueble.id %}">Editar</a></td>
+                                                            <td><a class="btn btn-danger" href="{% url 'eliminar_inmueble' inmueble.id %}">Eliminar</a></td>
                                                         </tr>
                                                         
                                                     {% endfor %}

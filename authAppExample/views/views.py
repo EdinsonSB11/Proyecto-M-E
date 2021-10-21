@@ -26,6 +26,7 @@ def crearInmueble(request):
         if form.is_valid():
             form.save()
             return redirect('perfil')
+    messages.success(request, '¡Inmueble creado con exito!' )
     return render(request,'crear_inmueble.html',contexto)
 
 def editarInmueble(request,id):
@@ -43,11 +44,13 @@ def editarInmueble(request,id):
         if form.is_valid():
             form.save()
             return redirect('perfil')
+    messages.success(request, '¡Inmueble editado con exito!' )
     return render(request,'crear_inmueble.html',contexto)
 
 def eliminarInmueble(request,id):
     inmueble = Account.objects.get(id =id)
     inmueble.delete()
+    messages.success(request, '¡Inmueble eliminado con exito!' )
     return redirect('perfil')
 
 def perfil(request):
