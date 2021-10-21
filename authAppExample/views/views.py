@@ -79,11 +79,10 @@ def register(request):
         if form.is_valid():      
             form.save()
             username = form.cleaned_data['username']
-            messages.success(request,f'Usuario{username}creado')
+            messages.success(request, '¡Usuario creado con extio, Ya te puedes Loguear!' )
             return redirect('index')
     else: 
         form = CustomCreationForm() 
     context = {'form':form}
         #data['form'] = formulario
-
     return render(request,'registration/registro.html',context)

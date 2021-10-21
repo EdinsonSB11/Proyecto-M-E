@@ -91,6 +91,14 @@ https://templatemo.com/tm-542-new-vision
         <br>
         <br>
 
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+
         
         <div class="row">
             <div class="col-12">

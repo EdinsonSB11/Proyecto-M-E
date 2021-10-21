@@ -81,6 +81,15 @@
             <br>
             <br>
             <br>
+            {%if user.is_authenticated%}
+            <div>
+                <div class="alert alert-info fade show" role="alert">
+                    <span>Publica tus alojamientos <strong>¡Gratis!</strong></span>
+                </div>
+            </div>
+            {% endif %}
+
+            
             {% if messages %}
             {% for message in messages %}
             <div class="alert alert-success fade show" role="alert">
