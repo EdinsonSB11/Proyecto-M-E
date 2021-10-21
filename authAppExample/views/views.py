@@ -1,7 +1,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render,redirect
 from authAppExample.models import Account
-from authAppExample.forms import InmuebleForm, UserRegisterForm
+from authAppExample.forms import InmuebleForm, CustomCreationForm
 from django.contrib import messages
 
 def inicio(request):
@@ -73,15 +73,17 @@ def resorts(request):
 
 
 def register(request):
+   
     if request.method == 'POST':
-	    form = UserRegisterForm(request.POST)
-	    if form.is_valid():
-		    form.save()
-		    username = form.cleaned_data['username']
-		    messages.success(request, f'Usuario {username} creado')
-		    return redirect('index')
-    else:
-		    form = UserRegisterForm()
+        form = CustomCreationForm(request.POST)
+        if form.is_valid():      
+            form.save()
+            username = form.cleaned_data['username']
+            messages.success(request,f'Usuario{username}creado')
+            return redirect('index')
+    else: 
+        form = CustomCreationForm() 
+    context = {'form':form}
+        #data['form'] = formulario
 
-    context = { 'form' : form }
-    return render(request, 'registration/registro.html', context)
+    return render(request,'registration/registro.html',context)

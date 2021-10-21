@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'perfil'
 LOGOUT_REDIRECT_URL = '/'
 
 
@@ -79,8 +79,6 @@ REST_FRAMEWORK = {
 		'rest_framework_simplejwt.authentication.JWTAuthentication',
 	)
 }
-
-AUTH_USER_MODEL = 'authAppExample.User'
 
 
 ROOT_URLCONF = 'authProjectExample.urls'

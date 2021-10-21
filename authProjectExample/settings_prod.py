@@ -29,7 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'perfil'
 LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
@@ -78,7 +78,6 @@ REST_FRAMEWORK = {
     )
 }
 
-AUTH_USER_MODEL = 'authAppExample.User'
 
 ROOT_URLCONF = 'authProjectExample.urls'
 
@@ -107,10 +106,10 @@ WSGI_APPLICATION = 'authProjectExample.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'   : 'django.db.backends.postgresql_psycopg2',
-        'NAME'     : 'd6c3qa939v8a7c',
-        'USER'     : 'tvqlnhayoapxae',
-        'PASSWORD' : 'bd707afd7c39206e04c447e77e814fb4c3be8f818779aad1a0d44946f9927ce9',
-        'HOST'     : 'ec2-18-209-143-227.compute-1.amazonaws.com',
+        'NAME'     : 'd1me125qo97p73',
+        'USER'     : 'bbmnpmhjbzwmbq',
+        'PASSWORD' : '18a578ccbe2bc15cc43ba31e37b1dc0e6430b00a1d021c99070624b865848fa4',
+        'HOST'     : 'ec2-23-22-243-103.compute-1.amazonaws.com',
         'PORT'     : '5432'
     }
 }
